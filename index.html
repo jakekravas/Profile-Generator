@@ -7,14 +7,47 @@
     <script src="https://kit.fontawesome.com/80eed1293f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
     <title>Profile Generator</title>
+    <style>
+        body {
+            background: #f6f6f6;
+        }
+
+        #pfp {
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid powderblue;
+        }
+
+        #att-container{
+            width: 40%;
+        }
+
+        #color-container{
+            width: 90%;
+            margin: auto;
+            /* background: blue; */
+            border-radius: 10px;
+            color: #f6f6f6;
+        }
+
+        .col-4 {
+            background: blue;
+            color: #f6f6f6;
+            border-radius: 10px;
+        }
+
+        a{
+            color: #f6f6f6;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col mx-auto">
-                <div class="card" id="color-container">
+                <div class="card" id="color-container" style="background:${favColor}">
                         <div class="card-body text-center">
                             <img id="pfp" class="img-fluid" src="51356952.jpg" alt="profile-photo">
                             <h2>${name}</h2>
@@ -22,6 +55,7 @@
                             <div id="att-container" class="d-flex justify-content-between mx-auto">
                                 <p class="lead"><i class="fas fa-location-arrow"></i> ${location}</p>
                                 <a href="${url}" class="lead"><i class="fab fa-github"></i> GitHub</a>
+                                
                             </div>
                         </div>
                 </div>
@@ -30,11 +64,11 @@
         <h1 class="text-center mt-3">Other Thing</h1>
         <div class="text-center my-5">
             <div class="row d-flex justify-content-around">
-                <div class="col-4 p-4">
+                <div class="col-4 p-4" style="background:${favColor}">
                     Repositories <br>
                     ${publicRepos}
                 </div>
-                <div class="col-4 p-4">
+                <div class="col-4 p-4" style="background:${favColor}">
                     Followers <br>
                     ${followers}
                 </div>
@@ -42,10 +76,10 @@
         </div>
         <div class="text-center">
             <div class="row d-flex justify-content-around">
-                <div class="col-4 p-4">
+                <div class="col-4 p-4" style="background:${favColor}">
                     Stars
                 </div>
-                <div class="col-4 p-4">
+                <div class="col-4 p-4" style="background:${favColor}">
                     Following <br>
                     ${following}
                 </div>
