@@ -237,7 +237,7 @@ inquirer.prompt([
                           <div class="container">
                               <div class="row">
                                   <div class="col">
-                                      <h1>${bio}</h1>
+                                      <h3>${bio}</h3>
                                   </div>
                               </div>
                               <div class="row">
