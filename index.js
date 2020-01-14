@@ -266,7 +266,7 @@ inquirer.prompt([
             if (err) throw err;
         });
 
-        conversion({ html: htmlFile }, function(err, result) {
+        conversion({ html: htmlPage }, function(err, result) {
             if (err) {
               return console.error(err);
             }
